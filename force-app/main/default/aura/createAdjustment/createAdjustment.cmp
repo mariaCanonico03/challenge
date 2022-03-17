@@ -1,0 +1,41 @@
+<aura:component controller="CreateAdjustmentController" implements ="force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:handler name="init" value="{! this }" action="{! c.doinit }"/>
+    <aura:attribute name="amount" type="String"/>
+    <aura:attribute name="showAdj" type="Boolean"/>
+    <aura:attribute name="adjId" type="String"/>
+    <aura:attribute name="adjStatus" type="String"/>
+    <aura:attribute name="amountReturned" type="String"/>
+    <aura:attribute name="adjustments" type="List"/>
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+    <lightning:card title="Adjustments" iconName="standard:product" >
+        <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+            <lightning:layout>
+                <lightning:layoutItem size="8" padding="around-small">
+                    <lightning:input aura:id="amount" label="Amount" type="currency" value="{!v.amount}"/>
+                    <lightning:button label="Create Adjustment" onclick="{!c.callCreateAdjustment}" variant="brand" class="slds-m-top_medium"/>
+                </lightning:layoutItem>
+                <aura:if isTrue="{!v.showAdj}">
+                <lightning:layoutItem size="8" padding="around-small">
+                    <div>LAST ADJUSTMENT CREATED</div>
+                    <label class="slds-form-element__label" for="adjId" id="adjIdLabel">Adjustment Id</label>
+                    <ui:outputText aura:id="adjId" value="{!v.adjId}"/>
+                    <br/>
+                    <label class="slds-form-element__label" for="amountID" id="adjIdLabel">Amount</label>
+                    <ui:outputText aura:id="amountID" value="{!v.amountReturned}"/>
+                    <br/>
+                    <label class="slds-form-element__label" for="statusId" id="adjIdLabel">Status</label>
+                    <ui:outputText aura:id="statusId" value="{!v.adjStatus}"/>
+                </lightning:layoutItem>
+    
+                    
+                </aura:if>
+            </lightning:layout>
+            <lightning:datatable data="{! v.mydata }"
+            columns="{! v.mycolumns }"
+            keyField="id"
+           />
+        </div>
+    
+    </lightning:card>
+</aura:component>

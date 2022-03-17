@@ -1,0 +1,16 @@
+{
+  "status": 0,
+  "result": {
+    "createdById": "0057Q0000035Z95QAE",
+    "createdByName": "Mariagiovanna Canonico",
+    "createdDate": "2022-03-14T18:07:15.000Z",
+    "fileName": "classes/ExternalSystemAccountController.cls",
+    "fullName": "ExternalSystemAccountController",
+    "id": "01p7Q00000BTYVuQAP",
+    "lastModifiedById": "0057Q0000035Z95QAE",
+    "lastModifiedByName": "Mariagiovanna Canonico",
+    "lastModifiedDate": "2022-03-14T18:07:15.000Z",
+    "manageableState": "unmanaged",
+    "type": "ApexClass"
+  }
+}
