@@ -1,0 +1,20 @@
+<aura:component controller="ExternalSystemAccountController" implements ="force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <div class="slds-p-bottom_large slds-p-left_large" style="width:500px">
+        <lightning:layout>
+            <lightning:layoutItem size="4" padding="around-small">
+                <lightning:inputName aura:id="contact"
+                                     label="Contact Name"
+                                     firstName="{!v.newContact.FirstName}"
+                                     lastName="{!v.newContact.LastName}"
+                                     salutation="{!v.newContact.Title}"
+                                     options="{!v.salutationOptions}"
+                                     required="true"/>
+            </lightning:layoutItem> 
+            <lightning:layoutItem size="8" padding="around-small">
+                <lightning:input aura:id="contact" label="Email" type="email" value="{!v.newContact.Email}"/>
+                <lightning:textarea aura:id="contact" label="Comments" value="{!v.newContact.Description}"/>
+                <lightning:button label="Create Contact" onclick="{!c.handleCreateContact}" variant="brand" class="slds-m-top_medium"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

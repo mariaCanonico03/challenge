@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "0057Q0000035Z95QAE",
+      "createdByName": "Mariagiovanna Canonico",
+      "createdDate": "2022-03-16T12:18:47.000Z",
+      "fileName": "aura/createAdj",
+      "fullName": "createAdj",
+      "id": "0Ab7Q0000018JqnSAE",
+      "lastModifiedById": "0057Q0000035Z95QAE",
+      "lastModifiedByName": "Mariagiovanna Canonico",
+      "lastModifiedDate": "2022-03-16T14:34:13.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    },
+    {
+      "createdById": "0057Q0000035Z95QAE",
+      "createdByName": "Mariagiovanna Canonico",
+      "createdDate": "2022-03-14T17:14:07.000Z",
+      "fileName": "aura/showAccountFromExternalSystem",
+      "fullName": "showAccountFromExternalSystem",
+      "id": "0Ab7Q0000018DtbSAE",
+      "lastModifiedById": "0057Q0000035Z95QAE",
+      "lastModifiedByName": "Mariagiovanna Canonico",
+      "lastModifiedDate": "2022-03-16T12:16:11.000Z",
+      "manageableState": "unmanaged",
+      "type": "AuraDefinitionBundle"
+    }
+  ]
+}

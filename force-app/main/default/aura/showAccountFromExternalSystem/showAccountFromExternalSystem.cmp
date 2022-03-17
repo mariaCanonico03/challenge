@@ -1,0 +1,36 @@
+<aura:component controller="ExternalSystemAccountController" implements ="force:lightningQuickActionWithoutHeader,flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:attribute name="externalSystemInfo" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="datatree" type="Object[]"/>
+<lightning:card>
+<div>Transactions</div>
+    <table class="slds-table slds-table--bordered">
+        <tbody>
+            <aura:iteration items="{!v.datatree}" var="row">
+                <tr>
+
+                    <td> {!row.product}</td>
+                    <td> {!row.iban}</td>
+                    <aura:iteration items="{!row.transactions}" var="transaction">
+                        <tr>
+        
+                            <td> {!transaction.name}</td>
+                            <td> {!transaction.transactionDate}</td>
+                            <td> {!transaction.resourceId}</td>
+                            <td> {!transaction.balanceType}</td>
+
+                        </tr>
+                        <aura:iteration items="{!transaction.amount}" var="amount">
+                            <tr>
+                                <td> {!amount.currencyResponse}</td>
+                                <td> {!amount.amount}</td>
+                                
+                            </tr>
+                        </aura:iteration>
+                    </aura:iteration>
+                </tr>
+            </aura:iteration>
+        </tbody>
+    </table>
+</lightning:card>
+</aura:component>
